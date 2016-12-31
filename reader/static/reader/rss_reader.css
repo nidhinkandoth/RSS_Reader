@@ -2,3 +2,11 @@
  color : blue;
  max-width: 50%;
 }
+.content {
+
+	border-radius: 20px;
+    background: #cce0ff;
+    padding: 20px; 
+    width: 90%;
+    height: 50%; 
+}

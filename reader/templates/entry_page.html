@@ -17,7 +17,7 @@
  <ul id='result' class= "boxs">
 
 
- </ul><br>
+ </ul><br><br>
 </form>
 <script>
 $("#submit").click(function(){
@@ -31,9 +31,9 @@ $("#submit").click(function(){
            html = JSON.parse(html)
            $.each(html, function(index,value) {
     
-              data =  "<li><h1 class = 'heading'>"+value.title+"</h1></li>"+
+              data =  "<div class ='content'><li><h1 class = 'heading'>"+value.title+"</h1></li>"+
                       "<li><p>"+value.description+"</p></li>"+
-                      "<li><p>"+value.link+"</p></li>"
+                      "<li><p>"+"<a href="+value.link+">Click here for more details</a>"+"</p></li></div>"
             
               $('#result').append(data);
            });
