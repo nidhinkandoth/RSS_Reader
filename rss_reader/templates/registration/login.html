@@ -1,0 +1,19 @@
+<html>
+<head>
+   <title>Login</title>
+</head>
+{% load static %}
+   <link rel="stylesheet" type="text/css" href={% static 'reader/reader_page.css' %}/>
+<h1 class='h1'>RSS READER</h1>
+<body class='body' >
+{% block content %}
+  <h2>Login</h2>
+  <form method="post" class='login_form'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+{% endblock %}
+ <div> <a href="{% url 'register' %}">New user? SignUp here..</a></div>
+</body>
+</html>
